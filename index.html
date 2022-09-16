@@ -27,31 +27,31 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 
       <!-- Header -->
       <nav >
-        <img id="logo" src="images/logo.svg">
+        <img id="logo" src="images/logo.svg" alt="logo">
         <div class="navElements" id="navElements">
 
-          <img id="closeMenu" onclick="hideMenu()" src="images/icon-close-menu.svg">
+          <img id="closeMenu" onclick="hideMenu()" src="images/icon-close-menu.svg" alt="closeMenu">
         <div class="block1">
           
           <div class="nav-link">
             <ul>
-              <li onclick="showFeatures()"><a href="#" >features <img id="down" data-image="downArrow" src="images/icon-arrow-down.svg"></a>
-                <div class="subMenu-1" id="sub1">
+              <li onclick="showFeatures()"><a href="#" >features <img id="down" data-image="downArrow" src="images/icon-arrow-down.svg" alt="openMenu"></a>
+                <ul class="subMenu-1" id="sub1">
                   <ul>
-                    <li><a href=""><img src="images/icon-todo.svg"> Todo List</a></li>
-                    <li><a href=""><img src="images/icon-calendar.svg"> Calender</a></li>
-                    <li><a href=""><img src="images/icon-reminders.svg"> Reminder</a></li>
-                    <li><a href=""><img src="images/icon-planning.svg"> Planning</a></li>
+                    <li><a href=""><img src="images/icon-todo.svg" alt="icon1"> Todo List</a></li>
+                    <li><a href=""><img src="images/icon-calendar.svg" alt="icon2"> Calender</a></li>
+                    <li><a href=""><img src="images/icon-reminders.svg" alt="icon3"> Reminder</a></li>
+                    <li><a href=""><img src="images/icon-planning.svg" alt="icon4"> Planning</a></li>
                   </ul>
 
 
-                </div>
+                </ul>
 
               </li>
               
-              <li onclick="showCompany()" ><a href="#">company <img id="down1" data-image="downArrow" src="images/icon-arrow-down.svg" ></a>
+              <li onclick="showCompany()" ><a href="#">company <img id="down1" data-image="downArrow" src="images/icon-arrow-down.svg" alt="img"></a>
               </li>
-                <div class="subMenu-2" id="sub2">
+                <ul class="subMenu-2" id="sub2">
                   <ul>
                     
                     <li><a href="">History</a></li>
@@ -61,7 +61,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
                   </ul>
 
 
-                </div>
+                </ul>
               
               <li><a href="#">careers Us</a></li>
               <li><a href="#">about</a></li>
@@ -79,7 +79,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 
         </div>
       </div>
-        <img id="menu"  src="images/icon-menu.svg" onclick="showMenu()">
+        <img id="menu"  src="images/icon-menu.svg" alt="img" onclick="showMenu()">
 
       </nav>
 
@@ -92,10 +92,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           <p>Get your team in sync,no matter your location. Streamline processes,create team rituals,and watch productivity soar.</p>
           <a href="#">Learn more</a>
           <div class="logos">
-            <img src="images/client-databiz.svg">
-            <img src="images/client-audiophile.svg">
-            <img src="images/client-meet.svg">
-            <img src="images/client-maker.svg">
+            <img src="images/client-databiz.svg" alt="img">
+            <img src="images/client-audiophile.svg" alt="img">
+            <img src="images/client-meet.svg" alt="img">
+            <img src="images/client-maker.svg" alt="img">
           </div>
         </section>
         <section class="container2">
@@ -109,13 +109,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 
   </div>
 
-  <!-- Footer -->
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/Rahul369-V/">Rahul Vivekanandan</a>.
-  </div> -->
 
-  <!-----------------JavaScript for Menu-------------------->
+
+  <!-- JavaScript -->
 	<script>
      let width = window.innerWidth;
      const showfeature = document.getElementById("sub1");
