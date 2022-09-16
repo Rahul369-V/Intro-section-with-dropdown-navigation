@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" >
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+  <div class="parentContainer">
+    <!-- Main content box -->
+    <div class="childContainer">
+
+      <!-- Header -->
+      <nav >
+        <img id="logo" src="images/logo.svg">
+        <div class="navElements" id="navElements">
+
+          <img id="closeMenu" onclick="hideMenu()" src="images/icon-close-menu.svg">
+        <div class="block1">
+          
+          <div class="nav-link">
+            <ul>
+              <li onclick="showFeatures()"><a href="#" >features <img id="down" data-image="downArrow" src="images/icon-arrow-down.svg"></a>
+                <div class="subMenu-1" id="sub1">
+                  <ul>
+                    <li><a href=""><img src="images/icon-todo.svg"> Todo List</a></li>
+                    <li><a href=""><img src="images/icon-calendar.svg"> Calender</a></li>
+                    <li><a href=""><img src="images/icon-reminders.svg"> Reminder</a></li>
+                    <li><a href=""><img src="images/icon-planning.svg"> Planning</a></li>
+                  </ul>
+
+
+                </div>
+
+              </li>
+              
+              <li onclick="showCompany()" ><a href="#">company <img id="down1" data-image="downArrow" src="images/icon-arrow-down.svg" ></a>
+              </li>
+                <div class="subMenu-2" id="sub2">
+                  <ul>
+                    
+                    <li><a href="">History</a></li>
+                    <li><a href="">Our Team</a></li>
+                    <li><a href="">Blog</a></li>
+                
+                  </ul>
+
+
+                </div>
+              
+              <li><a href="#">careers Us</a></li>
+              <li><a href="#">about</a></li>
+            </ul> 
+          </div>
+        </div>
+        <div class="block2">
+
+          <ul>
+              <li><a href="#">login</a></li>
+              <li><a href="#">register</a></li>
+              
+            </ul>
+         
+
+        </div>
+      </div>
+        <img id="menu"  src="images/icon-menu.svg" onclick="showMenu()">
+
+      </nav>
+
+      <!-- Body -->
+
+      <main id="content">
+
+        <section class="container1" >
+          <h1>Make remote work</h1>
+          <p>Get your team in sync,no matter your location. Streamline processes,create team rituals,and watch productivity soar.</p>
+          <a href="#">Learn more</a>
+          <div class="logos">
+            <img src="images/client-databiz.svg">
+            <img src="images/client-audiophile.svg">
+            <img src="images/client-meet.svg">
+            <img src="images/client-maker.svg">
+          </div>
+        </section>
+        <section class="container2">
+         
+        </section>
+
+      </main>
+
+    </div>
+
+
+  </div>
+
+  <!-- Footer -->
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Rahul369-V/">Rahul Vivekanandan</a>.
+  </div> -->
+
+  <!-----------------JavaScript for Menu-------------------->
+	<script>
+     let width = window.innerWidth;
+     const showfeature = document.getElementById("sub1");
+     const showcompany = document.getElementById("sub2");
+     const imgDownArrow = document.getElementById("down");
+    const img = document.getElementById('down1');
+    const popMenu = document.getElementById('navElements');
+    console.log(width)
+		function showFeatures(){
+      // console.log(show);
+      if (width <= 700) {
+        if(showfeature.style.opacity == 0 && imgDownArrow.dataset.image == "downArrow"){
+        imgDownArrow.src = "images/icon-arrow-up.svg";
+        imgDownArrow.dataset.image = "upArrow";
+        showfeature.style.display='block'
+        showfeature.style.opacity = 1;
+      }
+      else{
+        imgDownArrow.src = "images/icon-arrow-down.svg";
+        imgDownArrow.dataset.image = "downArrow";
+        showfeature.style.display='none'
+        showfeature.style.opacity=0;
+      }
+    }else{
+      if(showfeature.style.opacity == 0 && imgDownArrow.dataset.image == "downArrow"){
+        imgDownArrow.src = "images/icon-arrow-up.svg";
+        imgDownArrow.dataset.image = "upArrow";
+        showfeature.style.display='block'
+        showfeature.style.opacity=1;
+      }
+      else{
+        imgDownArrow.src = "images/icon-arrow-down.svg";
+        imgDownArrow.dataset.image = "downArrow";
+        showfeature.style.display='none'
+        showfeature.style.opacity=0;
+      } }
+      return;
+    }
+    function showCompany(){
+      if(width <=700){
+        if(showcompany.style.opacity == 0 && img.dataset.image == "downArrow"){
+        img.src = "images/icon-arrow-up.svg";
+        img.dataset.image = "upArrow";
+        showcompany.style.display='block';
+        showcompany.style.opacity=1;
+      }
+      else{
+        img.src = "images/icon-arrow-down.svg";
+        img.dataset.image = "downArrow";
+        showcompany.style.display='none';
+        showcompany.style.opacity=0;
+      } 
+
+      }else{
+      if(showcompany.style.opacity == 0 && img.dataset.image == "downArrow"){
+        img.src = "images/icon-arrow-up.svg";
+        img.dataset.image = "upArrow";
+        showcompany.style.display='block';
+        showcompany.style.opacity=1;
+      }
+      else{
+        img.src = "images/icon-arrow-down.svg";
+        img.dataset.image = "downArrow";
+        showcompany.style.display='none';
+        showcompany.style.opacity=0;
+      } }
+      return;
+    }
+
+    function showMenu(){
+      popMenu.style.right="0";
+    }
+
+    function hideMenu(){
+      popMenu.style.right="-200px";
+    }
+  	
+
+
+	</script>
+</body>
+</html>
